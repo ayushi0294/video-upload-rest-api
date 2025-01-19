@@ -17,7 +17,6 @@ const ensureUploadDir = (dirPath) => {
 
 
 const UPLOAD_DIR = path.join(__dirname, '..', "..", 'uploads');
-console.log("UPLOAD_DIR",UPLOAD_DIR)
 ensureUploadDir(UPLOAD_DIR);
 
 // Configure Multer storage

@@ -1,12 +1,11 @@
 
 
 import ffmpegInstaller from '@ffmpeg-installer/ffmpeg';
-// import ffprobeInstaller from '@ffprobe-installer/ffprobe';
 import ffmpeg from 'fluent-ffmpeg';
 // Set the path to ffmpeg
 ffmpeg.setFfmpegPath(ffmpegInstaller.path);
-// ffmpeg.setFfprobePath(ffprobeInstaller.path);
 //Helper function to get video size using ffprobe
+
 export const getVideoFileSize = async (filePath) => {
     try {
         const metadata = await new Promise((resolve, reject) => {

@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "b53bba9b-c463-4edf-8c5d-d51512d76f9d",
+		"name": "videos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25309306"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/api/videos/merge",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "STATIC_API_TOKEN",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"videoIds\":[28,29]\r\n   \r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/videos/merge"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/videos/upload",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "STATIC_API_TOKEN",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/ayushig/Videos/big_buck_bunny_720p_1mb.mp4"
+						},
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/C:/Users/ayushig/Videos/big_buck_bunny_720p_1mb.mp4"
+						}
+					]
+				},
+				"url": "localhost:3000/api/videos/upload"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/videos/trim",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "STATIC_API_TOKEN",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"videoId\": 41,\r\n    \"start\": 1,\r\n    \"end\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/videos/trim"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/videos/generate-link",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "STATIC_API_TOKEN",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"videoId\":41,\r\n    \"expiry\":\"30\"\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:3000/api/videos/generate-link"
+			},
+			"response": []
+		}
+	]
+}
